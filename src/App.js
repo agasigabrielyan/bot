@@ -8,39 +8,33 @@ function App(props) {
     {
       id: 1,
       title:'Наименование этого облака',
-      description: 'Описание, что нужно сделать по задаче тут находится',
-      on: true
-    },
-    {
-      id: 2,
-      title:'Наименование этого облака',
-      description: 'Привет, этот бот поможет тебе изучить bitrix24 выполняя задачи на практике, по окончании курса ты будешь знать о битрикс24 все, что начать эффективано работать с bitrix24.',
-      on: false
-    },
-    {
-      id: 3,
-      title:'Наименование этого облака',
-      description: 'Описание, что нужно сделать по задаче тут находится',
-      on: true
-    },
-    {
-      id: 4,
-      title:'Наименование этого облака',
-      description: 'Описание, что нужно сделать по задаче тут находится',
-      on: true
-    },
-    {
-      id: 5,
-      title:'Наименование этого облака',
-      description: 'Описание, что нужно сделать по задаче тут находится',
-      on: false
-    },
-    {
-      id: 6,
-      title:'Наименование этого облака',
-      description: 'Описание, что нужно сделать по задаче тут находится',
-      on: false
-    },
+      messages: [
+        {
+          messageId : 55,
+          messageItself: 'Пять Пять Пять Пять Пять Пять Пять Пять Пять Пять Пять '
+        },
+        {
+          messageId : 56,
+          messageItself: '<b>Второе сообщение урока</b> ' +
+              'Второе сообщение урока Второе сообщение урока' +
+              ' Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока ' +
+              '<ul><li>adsfafd</li><li>asdfasfasd</li><li>afdas</li></ul>'
+        },
+        {
+          messageId : 59,
+          messageItself: '<b>5 сообщение урока</b> Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока '
+        },
+      ],
+      on: true,
+      prevButton: {
+        prevButtonText: 'Назад',
+        prevButtonLink: ''
+      },
+      nextButton: {
+        nextButtonText: 'Поехали дальше',
+        nextButtonLink: 'http://yandex.ru'
+      }
+    }
   ];
   const [squares, setSquares] = React.useState(boxes);
 
@@ -56,6 +50,9 @@ function App(props) {
 
   const squareElements = squares.map(square => (
       <Box
+          nextButtoon={square.nextButton}
+          prevButton={square.prevButton}
+          messages={square.messages}
           toggle={toggle}
           title={square.title}
           description={square.description}
@@ -66,8 +63,8 @@ function App(props) {
 
   return (
     <div className="bitrix24-learning-bot">
+      <Header />
       <div className="bot">
-        <Header />
         {squareElements}
       </div>
     </div>

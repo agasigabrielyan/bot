@@ -13,8 +13,8 @@
 body,html {
     margin: 0;
     padding: 0;
-    margin-top: -10px;
 }
+
 .bitrix24-learning-bot {
     background-color: #f1f2f9;
     font-family: Roboto-Regular;
@@ -23,10 +23,21 @@ body,html {
 
 .bot-header {
     text-align: center;
-    padding: 15px 0 0;
+    padding:1px 0 0;
+    box-sizing: border-box;
 }
 
 .bot {
     margin: 0 auto;
     max-width: 700px;
+}
+
+.box__message {
+    background-color: #fff;
+    padding: 15px 30px;
+    margin-bottom: 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    line-height: 30px;
 }

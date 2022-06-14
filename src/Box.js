@@ -1,21 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Message from './components/Message';
 
 export default function Box(props) {
 
-    const styles = {
-        backgroundColor: props.on ? "#222222" : "transparent"
-    }
+    const messageElements = props.messages.map(message => (
+        <Message
+            key={message.messageId}
+            message={message.messageItself} />
+    ));
 
     return (
-        <div
-            style={styles}
-            className="box"
-            onClick={() => props.toggle(props.id)}>
-            <h2>{props.title}</h2>
-            <p>
-                {props.description}
-            </p>
+        <div className="box">
+            {messageElements}
         </div>
     );
 }
