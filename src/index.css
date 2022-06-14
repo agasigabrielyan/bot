@@ -1,13 +1,32 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url('./fonts/Roboto-Regular/Roboto-Regular.woff') format('woff'),
+    url('./fonts/Roboto-Regular/Roboto-Regular.woff2') format('woff2'),
+    url('./fonts/Roboto-Regular/Roboto-Regular.svg#Roboto-Regular') format('svg'),
+    url('./fonts/Roboto-Regular/Roboto-Regular.eot'),
+    url('./fonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body,html {
+    margin: 0;
+    padding: 0;
+    margin-top: -10px;
+}
+.bitrix24-learning-bot {
+    background-color: #f1f2f9;
+    font-family: Roboto-Regular;
+    min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bot-header {
+    text-align: center;
+    padding: 15px 0 0;
+}
+
+.bot {
+    margin: 0 auto;
+    max-width: 700px;
 }
