@@ -1,4 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="hovered-paths"><g>
+<svg
+        width="32"
+        height="32"
+        x="0"
+        y="0"
+        viewBox="0 0 32 32"
+        style="enable-background:new 0 0 32 32;"
+        xml:space="preserve"
+        class="hovered-paths bot__logo">
+    <g>
 <path xmlns="http://www.w3.org/2000/svg" style="" d="M256,259.435c-54.244,0-98.216,6.765-98.216,15.11c0,8.345,43.974,17.171,98.216,17.171  c54.244,0,98.216-8.826,98.216-17.171C354.217,266.2,310.244,259.435,256,259.435z" fill="#dddddd" data-original="#dddddd" class=""></path>
 <g xmlns="http://www.w3.org/2000/svg">
 	<path style="" d="M204.141,261.712c-67.131,6.435-57.344,21.204,4.788,27.675   C180.545,281.512,174.697,269.874,204.141,261.712z" fill="#bfc0c1" data-original="#bfc0c1" class=""></path>

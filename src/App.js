@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import ReactDOM from 'react-dom/client';
 import Header from './components/Header';
-import Box from './components/Box'
+import Box from './components/Box';
 
 function App(props) {
   const boxes = [
@@ -22,7 +22,7 @@ function App(props) {
         },
         {
           messageId : 59,
-          messageItself: '<b>5 сообщение урока</b> Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока Второе сообщение урока '
+          messageItself: 'Прям коротенькое сообщенице'
         },
       ],
       on: true,
@@ -72,27 +72,54 @@ function App(props) {
   ];
   const [squares, setSquares] = React.useState(boxes);
 
-  function toggle(id) {
+  function toggle(nextBoxId) {
     setSquares(prevSquares => {
-      return prevSquares.map((square) => {
-        return square.id === id ? {...square, on: !square.on} : square
-      })
+      const newSquares = [];
+
+      for(let i=0; i<prevSquares.length; i++) {
+        const currentSquares = prevSquares[i];
+        if(currentSquares.id === nextBoxId) {
+          debugger;
+          const updatedSquare = {
+            ...currentSquares,
+            show: true
+          }
+          newSquares.push(updatedSquare)
+        } else {
+          newSquares.push(currentSquares)
+        }
+      }
+
+      return newSquares;
     })
   }
 
-  const squareElements = squares.map(square => (
+  let squareToShow = [];
+
+  if(squares) {
+    for(let i=0; i<squares.length; i++) {
+      if(squares[i].show) {
+        squareToShow.push(squares[i]);
+      }
+    }
+  }
+
+  const squareElements = squareToShow.map(square => (
       <Box
+          toggle={toggle}
+          nextBoxId={square.nextBoxId}
           show={square.show}
           nextButtoon={square.nextButton}
           prevButton={square.prevButton}
           messages={square.messages}
-          toggle={toggle}
           title={square.title}
           description={square.description}
           key={square.id}
           id={square.id}
           on={square.on} />
   ));
+
+
 
   return (
     <div className="bitrix24-learning-bot">

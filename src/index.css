@@ -19,25 +19,35 @@ body,html {
     background-color: #f1f2f9;
     font-family: Roboto-Regular;
     min-height: 100vh;
+    padding-top: 100px;
 }
 
 .bot-header {
     text-align: center;
-    padding:1px 0 0;
+    padding:15px 0 15px;
     box-sizing: border-box;
     background-color: #17568c;
     color: #fff;
     margin-bottom: 15px;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
 }
 
-.bot-header {
-    padding: 0;
+.bot-header h1{
+    padding: 2px 0 5px;
     margin: 0;
 }
 
 .bot {
     margin: 0 auto;
     max-width: 700px;
+}
+
+.bot__logo {
+    width: 32px;
+    height: 32px;
 }
 
 .box__message {
@@ -48,6 +58,7 @@ body,html {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     line-height: 30px;
+    color: rgba(0,0,0,0.9);
 }
 
 .bot__buttons {
