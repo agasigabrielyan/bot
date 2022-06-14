@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Message from './components/Message';
-import Button from './components/Button';
+import Message from './Message';
+import Button from './Button';
 
 export default function Box(props) {
 

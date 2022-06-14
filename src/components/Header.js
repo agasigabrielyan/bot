@@ -5,7 +5,7 @@ export default function Header() {
 
     return (
         <div className="bot-header">
-            <h1 className="bot-heading">Обучающий bitrix24 бот</h1>
+            <h1 className="bot-heading">Обучающий Bitrix24 бот</h1>
         </div>
     );
 }

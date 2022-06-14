@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import ReactDOM from 'react-dom/client';
-import Header from './Header';
-import Box from './Box'
+import Header from './components/Header';
+import Box from './components/Box'
 
 function App(props) {
   const boxes = [
@@ -34,7 +34,8 @@ function App(props) {
         nextButtonText: 'Поехали дальше',
         nextButtonLink: 'http://yandex.ru'
       },
-      nextBoxId: 2
+      nextBoxId: 2,
+      show: true
     },
     {
       id: 2,
@@ -65,12 +66,11 @@ function App(props) {
         nextButtonText: 'Будем делать',
         nextButtonLink: 'http://yandex.ru'
       },
-      nextBoxId: 1
+      nextBoxId: 1,
+      show: false
     }
   ];
   const [squares, setSquares] = React.useState(boxes);
-
-
 
   function toggle(id) {
     setSquares(prevSquares => {
@@ -82,6 +82,7 @@ function App(props) {
 
   const squareElements = squares.map(square => (
       <Box
+          show={square.show}
           nextButtoon={square.nextButton}
           prevButton={square.prevButton}
           messages={square.messages}
