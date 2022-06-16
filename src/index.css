@@ -59,6 +59,7 @@ body,html {
     border-bottom-right-radius: 15px;
     line-height: 30px;
     color: rgba(0,0,0,0.9);
+    display: inline-block;
 }
 
 .bot__buttons {
