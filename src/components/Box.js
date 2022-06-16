@@ -7,9 +7,10 @@ export default function Box(props) {
         <Message key={message.messageId} message={message.messageItself} />
     ));
 
+    const currentBoxIdentifier = props.nextBoxId + "_box";
 
     return (
-        <div className="box">
+        <div id={currentBoxIdentifier} className="box">
             <div className="bot__messages">
                 {messageElements}
             </div>

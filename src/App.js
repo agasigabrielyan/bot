@@ -78,7 +78,6 @@ function App(props) {
       for(let i=0; i<prevSquares.length; i++) {
         const currentSquares = prevSquares[i];
         if(currentSquares.id === nextBoxId) {
-          debugger;
           const updatedSquare = {
             ...currentSquares,
             show: true
@@ -91,6 +90,8 @@ function App(props) {
 
       return newSquares;
     })
+
+    alert(nextBoxId);
   }
 
   let squareToShow = [];

@@ -50,6 +50,11 @@ body,html {
     height: 32px;
 }
 
+.box {
+    padding-bottom: 150px;
+    border-bottom: 5px solid red;
+}
+
 .box__message {
     background-color: #fff;
     padding: 15px 30px;
