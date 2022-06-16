@@ -90,8 +90,6 @@ function App(props) {
 
       return newSquares;
     })
-
-    alert(nextBoxId);
   }
 
   let squareToShow = [];
