@@ -1,5 +1,4 @@
-import React, {useState} from "react";
-import ReactDOM from 'react-dom/client';
+import React from "react";
 import Header from './components/Header';
 import Box from './components/Box';
 

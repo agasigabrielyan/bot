@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import Message from './Message';
 
 export default function Box(props) {
