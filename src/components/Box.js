@@ -7,7 +7,7 @@ export default function Box(props) {
         <Message key={message.messageId} message={message.messageItself} />
     ));
 
-    const currentBoxIdentifier = props.nextBoxId + "_box";
+    const currentBoxIdentifier = 'box_number_' + props.id;
 
     return (
         <div id={currentBoxIdentifier} className="box">
@@ -15,10 +15,11 @@ export default function Box(props) {
                 {messageElements}
             </div>
             <div className="bot__buttons">
-                <div onClick={(event) => props.toggle()} className="bot__button">{props.prevButton.prevButtonText}</div>
-
                 <div
-                    onClick={(event) => props.toggle(props.nextBoxId)}
+                    onClick={() => props.toggle()}
+                    className="bot__button">{props.prevButton.prevButtonText}</div>
+                <div
+                    onClick={() => props.toggle(props.nextBoxId)}
                     className="bot__button">
                     {props.nextButtoon.nextButtonText}
                 </div>

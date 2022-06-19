@@ -92,6 +92,17 @@ function App(props) {
     })
   }
 
+  React.useEffect((event) => {
+    const boxes = document.getElementsByClassName('box');
+    const lastBoxId = boxes[boxes.length - 1].attributes.id.nodeValue;
+    const lastBox = document.getElementById(lastBoxId);
+    window.scrollTo({
+      top: (lastBox.offsetTop - 77),
+      left: lastBox.offsetLeft,
+      behavior: 'smooth'
+    });
+  });
+
   let squareToShow = [];
 
   if(squares) {
