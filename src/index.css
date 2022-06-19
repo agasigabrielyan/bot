@@ -52,7 +52,6 @@ body,html {
 
 .box {
     padding-bottom: 150px;
-    border-bottom: 5px solid red;
 }
 
 .box__message {
