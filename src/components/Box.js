@@ -16,9 +16,6 @@ export default function Box(props) {
             </div>
             <div className="bot__buttons">
                 <div
-                    onClick={() => props.toggle()}
-                    className="bot__button">{props.prevButton.prevButtonText}</div>
-                <div
                     onClick={() => props.toggle(props.nextBoxId)}
                     className="bot__button">
                     {props.nextButtoon.nextButtonText}

@@ -25,12 +25,8 @@ function App(props) {
         },
       ],
       on: true,
-      prevButton: {
-        prevButtonText: 'Назад',
-        prevButtonLink: 'http://google.com'
-      },
       nextButton: {
-        nextButtonText: 'Поехали дальше',
+        nextButtonText: 'Поехали',
         nextButtonLink: 'http://yandex.ru'
       },
       nextBoxId: 2,
@@ -57,10 +53,6 @@ function App(props) {
         },
       ],
       on: true,
-      prevButton: {
-        prevButtonText: 'Назад',
-        prevButtonLink: 'http://google.com'
-      },
       nextButton: {
         nextButtonText: 'Будем делать',
         nextButtonLink: 'http://yandex.ru'
@@ -96,8 +88,11 @@ function App(props) {
     const boxes = document.getElementsByClassName('box');
     const lastBoxId = boxes[boxes.length - 1].attributes.id.nodeValue;
     const lastBox = document.getElementById(lastBoxId);
+
+    const lastBoxOffsetTop = boxes.length === 1 ? 0 : lastBox.offsetTop;
+
     window.scrollTo({
-      top: (lastBox.offsetTop - 77),
+      top: lastBoxOffsetTop,
       left: lastBox.offsetLeft,
       behavior: 'smooth'
     });

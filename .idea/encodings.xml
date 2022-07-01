@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/build/static/js/main.ef0192f4.chunk.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/App.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/Box.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/components/Box.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/Button.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/components/Header.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/Header.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/Message.js" charset="UTF-8" />
   </component>
